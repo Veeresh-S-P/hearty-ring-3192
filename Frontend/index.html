@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: black;
+      }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  background-color: black;
+  position: relative;
+  z-index: 2;
+}
+.slideshow-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.logo img {
+  width: 200px;
+  height: 75px;
+  
+}
+
+.search-bar{
+  margin-left: 655px;
+}
+.search-bar input {
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in .dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.sign-in .dropdown .dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.sign-in .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sign-in .dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sign-in .dropdown-content li {
+  padding: 10px;
+}
+
+.sign-in .dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sign-in .dropdown-content li:hover {
+  background-color: #f2f2f2;
+}
+
+.cart img {
+  width: 20px;
+  height: 20px;
+}
+.slideshow-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.images{
+ display: flex;
+ justify-content: space-between;
+ background-color: black;
+ margin-top: 0px;
+}
+
+.slideshow-slide{
+height: 40%;
+box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+margin-top: 7px;
+
+border: 0px solid black;
+}
+.description{
+  text-align: center;
+  color: white;
+
+}
+.discount-price{
+  text-align: center;
+  color: white;
+}
+.price{
+  text-align: center;
+  color: white;
+}
+.shop-by-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.category-item img {
+  width: 100px;
+  height: auto;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.category-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.Featuredimage{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+}
+.Featuredimage img{
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="2.png" ></a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="sign-in">
+      <div class="dropdown">
+        <a style="color: white; text-decoration: double;" href="#">Sign In</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Wish List</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Signup</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cart">
+      <a style="color: white; text-decoration: double;"href="#">Cart</a>
+    </div>
+  </nav>
+  <hr style="border-top:2px solid white; margin: 1px 0; background-color: black;">
+
+  <div style="display: flex; justify-content: space-evenly;color: white;background-color: black;" class="headings">
+    <h3>Products</h3>
+    <h3>Cards</h3>
+    <h3>Used</h3>
+    <h3>Deals</h3>
+    <h3>Deal of the day</h3>
+    <h3>Creadit card</h3>
+    <h3>Gift cards</h3>
+    <h3>Students</h3>
+  </div>
+  <hr style="border-top:2px solid white; margin: 1px 0; background-color: black;">
+  <div class="slideshow-container">
+    <div class="slideshow">
+      <img src="https://www.adorama.com/images/cms/36471Hero-Semi-Annual-Desktop@2x_11210.jpg" alt="Slide 1">
+      <img src="https://www.adorama.com/images/cms/36471New-Blackmagicdesign-022023-Hero-Desktop_(1)_65733.jpg" alt="Slide 2">
+      <img src="https://www.adorama.com/images/cms/36471NPA-Sony-50mm-GM-Hero-Desktop-PO@1.25x_73027.jpg" alt="Slide 3">
+      <img src="https://www.adorama.com/images/cms/36471Feb_Computer_and_Gaming_Week-Hero-Desktop_09496.jpg" alt="Slide 4">
+      <img src="https://www.adorama.com/col/CDP/CALLANDSAVE-Hero-Desktop%401.5x.jpg" alt="Slide 5">
+      <img src="https://www.adorama.com/images/cms/36471Adorama-Edge-Presidents-Week-Hero-Desktop@1.5x_67252.jpg" alt="Slide 6">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  
+  <h1 style="color: white; background-color: black;text-align: center;margin-top: 42px;">OUR TOP DEALS</h1>
+  <div class="images">
+    
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/car5.jpg">
+      <div class="description">Canon EOS Mirrorless Digital body</div>
+      <div class="discount-price">$50</div>
+      <div class="price">$100</div>
+    </div>
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/gphero11.jpg">
+      <div class="description">Flaspoint zoom Li-on III R3</div>
+      <div class="discount-price">$75</div>
+      <div class="price">$120</div>
+    </div>
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/ihpt230.jpg">
+      <div class="description">Sonos entertainment set with beam</div>
+      <div class="discount-price">$75</div>
+      <div class="price">$120</div>
+    </div>
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/acmgn63lla.jpg">
+      <div class="description">Sonos entertainment set with beam</div>
+      <div class="discount-price">$75</div>
+      <div class="price">$120</div>
+    </div>
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/fplfsmfbjr.jpg">
+      <div class="description">applle mac book with high work load</div>
+      <div class="discount-price">$75</div>
+      <div class="price">$120</div>
+    </div>
+    <div class="slideshow-slide">
+      <img src="https://www.adorama.com/images/product/car5.jpg">
+      <div class="description">Canon EOS Mirrorless Digital body</div>
+      <div class="discount-price">$75</div>
+      <div class="price">$120</div>
+    </div>
+    
+  
+  </div>
+  <hr style="border-top:2px solid white; margin: 50px 0; background-color: black;">
+  <h2 style="color: white;margin-top: 70px;margin-left: 20px;">SHOP BY CATEGORY</h2>
+  <div class="shop-by-category">
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-cameras.png">
+      <div class="category-name">Camera</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-lenses.png">
+      <div class="category-name">Lense</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-lighting.png">
+      <div class="category-name">lights</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-computers.png">
+      <div class="category-name">Computers</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-video.png">
+      <div class="category-name">Stands</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-headphones.png">
+      <div class="category-name">Audios</div>
+    </div>
+    <div class="category-item">
+      <img  src="https://www.adorama.com/col/images/category-icons/icon-category-hometheater.png">
+      <div class="category-name">Personals</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-homeoffice.png">
+      <div class="category-name">Home theaters</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-optics.png">
+      <div class="category-name">Binaculars</div>
+    </div>
+    <div class="category-item">
+      <img src="https://www.adorama.com/col/images/category-icons/icon-category-video.png">
+      <div class="category-name">Gamings</div>
+    </div>
+
+  </div>
+  
+  <div style="background-color:whitesmoke;">
+    <h2 style="color: black; margin-top: 30px;margin-left: 20px;">Featured Savings</h2>
+    <div class="Featuredimage">
+    <div>
+      <img src="https://www.adorama.com/col/CDP/Laptops%20%26%20Notebooks-IS-Banner-Desktop%402x.jpg">
+    </div>
+    <div>
+      <img src="https://www.adorama.com/col/CDP/Desktop%20Computers-IS-Banner-Desktop%402x.jpg">
+    </div>
+    <div>
+      <img src="https://www.adorama.com/col/CDP/iPads%20%26%20Tablets-IS-Banner-Desktop%402x.jpg">
+    </div>
+    <div>
+      <img src="https://www.adorama.com/col/CDP/Drives%2C%20SSD%20%26%20Storage-IS-Banner-Desktop%402x.jpg">
+    </div>
+    </div>
+
+  </div>
+  <div style="margin-left: 30px;margin-top: 10px;">
+    <img src="https://www.adorama.com/images/cms/36471Yamaha_HE_Sale-Spotlight-Large-Desktop_62650.jpg">
+
+  </div>
+  <div style="display: flex;justify-content: space-around;width: 90%;background-color: black; gap: 20px;margin-left: 50px;">
+
+  
+  <div>
+    <img src="https://www.adorama.com/images/cms/36471Westcott_Backdrop_-_NPA-Spotlight-Desktop_11120.jpg">
+    <h1>Smooth & Seamless for Studio & Travel</h1>
+    <p>New Wrinkle-Resistant Colored Backdrops for photographers who need to work fast and travel light. Easy to use, machine-washable, and reflection-free.</p>
+  </div>
+  <div>
+    <img src="https://www.adorama.com/col/CDP/NPA-DJI-Osmo-Mobile-SE-Spotlight-Desktop.jpg">
+    <h1>New Arrival: DJI Osmo Mobile SE
+    </h1>
+    <p>Osmo Mobile SE's foldable design is easy to store and carry. Throw it in your pocket so that when inspiration strikes, you're ready to shoot smooth footage on the spot.</p>
+  </div>
+
+</div>
+    
+</body>
+
+</html>
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slideshow")[0].children;
+  const slideCount = slides.length;
+  if (n > slideCount) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slideCount;
+  }
+  for (let i = 0; i < slideCount; i++) {
+    slides[i].style.transform = `translateX(${-100 * (slideIndex - 1)}%)`;
+  }
+}
+
+setInterval(function() {
+  plusSlides(1);
+}, 3000);
+</script>
